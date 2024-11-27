@@ -7,7 +7,7 @@
 		"*.css"
 	],
 	"dependencies": {
-		"@bitgo-beta/sdk-api": "1.10.1-beta.308",
+		"@bitgo-beta/sdk-api": "patch:@bitgo-beta/sdk-api@npm%3A1.10.1-beta.308#~/.yarn/patches/@bitgo-beta-sdk-api-npm-1.10.1-beta.308-17f7dda94b.patch",
 		"@bitgo-beta/sdk-core": "8.2.1-beta.309",
 		"@bitgo-beta/statics": "15.1.1-beta.312",
 		"@my/ui": "0.0.1",

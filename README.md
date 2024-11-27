@@ -52,7 +52,14 @@ To run with optimizer on in dev mode (just for testing, it's faster to leave it 
 
 To see debug output to verify the compiler, add `// debug` as a comment to the top of any file.
 
-- Expo local dev: `yarn native`
+- Expo:
+```sh
+  cd apps/expo/ios
+  pod install
+  cd ..
+  npx expo run:ios
+  npx expo run:android
+```
 
 ## UI Kit
 
