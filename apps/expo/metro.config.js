@@ -4,6 +4,7 @@
  * @type {import('expo/metro-config')}
  */
 const { getDefaultConfig } = require('@expo/metro-config')
+const metroDefault = require('metro-config/src/defaults/defaults');
 const path = require('node:path')
 
 const projectRoot = __dirname
@@ -62,7 +63,7 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
     return {
       filePath: path.resolve(
         workspaceRoot,
-        'node_modules/@silencelaboratories/dkls-wasm-ll-node/dkls-wasm-ll-node.js'
+        'node_modules/@silencelaboratories/dkls-wasm-ll-web/dkls-wasm-ll-web.js'
       ),
       type: 'sourceFile',
     }
@@ -80,14 +81,13 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
   return context.resolveRequest(context, moduleName, platform)
 }
 config.resolver.extraNodeModules = {
-  ...require('node-libs-expo'),
   '@brandonblack/musig/base_crypto': path.resolve(
     workspaceRoot,
     'node_modules/@brandonblack/musig/lib/base_crypto.js'
   ),
   '@silencelaboratories/dkls-wasm-ll-node': path.resolve(
     workspaceRoot,
-    'node_modules/@silencelaboratories/dkls-wasm-ll-node/dkls-wasm-ll-node.js'
+    'node_modules/@silencelaboratories/dkls-wasm-ll-web/dkls-wasm-ll-web.js'
   ),
   '@silencelaboratories/dkls-wasm-ll-web': path.resolve(
     workspaceRoot,
@@ -98,5 +98,8 @@ config.resolver.extraNodeModules = {
     'node_modules/entities/lib/maps/entities.json'
   ),
 }
+
+// config.resolver.extraNodeModules = require('node-libs-expo')
+config.resolver.assetExts = metroDefault.assetExts.concat(['wasm'])
 
 module.exports = config

@@ -15,6 +15,8 @@ import { ChevronDown, ChevronUp, X } from '@tamagui/lucide-icons'
 import { useState } from 'react'
 import { Platform } from 'react-native'
 import { useLink } from 'solito/navigation'
+import { BitGoAPI} from '@bitgo-beta/sdk-api'
+console.log('Home')
 
 export function HomeScreen({ pagesMode = false }: { pagesMode?: boolean }) {
   const linkTarget = pagesMode ? '/pages-example-user' : '/user'
@@ -54,33 +56,36 @@ export function HomeScreen({ pagesMode = false }: { pagesMode?: boolean }) {
         </Paragraph>
         <Separator />
       </YStack>
-
-      <Button {...linkProps}>Link to user</Button>
       <Button
         onPress={async () => {
-          const { BitGoAPI } = await import('@bitgo-beta/sdk-api')
-          const sdk = new BitGoAPI({
-            env: 'staging',
-          })
+          try {
 
-          // BitGoJS specifically won't honor the env you request, so we must forcibly overwrite it
-          sdk['_env'] = 'staging'
-          const bgSdk = sdk
-          const loginResponse = await bgSdk.authenticate({
-            ensureEcdhKeychain: true,
-            ...{
-              username: 'ayushjain+staging@bitgo.com',
-              password: '#Bondiola12345',
-              otp: '000000',
-            },
-            forceSMS: false,
-            extensible: true,
-          })
-          console.log(loginResponse)
-          console.log('Logged in')
-        }}
+            const sdk = new BitGoAPI({
+              env: 'staging',
+            })
+            
+            // BitGoJS specifically won't honor the env you request, so we must forcibly overwrite it
+            sdk['_env'] = 'staging'
+            const bgSdk = sdk
+            const loginResponse = await bgSdk.authenticate({
+              ensureEcdhKeychain: true,
+              ...{
+                username: 'experience+test-admin+do-not-delete@bitgo.com',
+                password: 'Ghghjkg!455544llll',
+                otp: '000000',
+              },
+              forceSMS: false,
+              extensible: true,
+            })
+            alert('Access Token: ' + loginResponse.access_token)
+            console.log('Logged in')
+          }
+        catch (e) {
+          console.error(e)
+        }
+      }}
       >
-        Link to user2s
+        Login
       </Button>
 
       <SheetDemo />
