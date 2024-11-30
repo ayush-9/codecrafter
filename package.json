@@ -55,11 +55,9 @@
     "constants": "constants-browserify",
     "crypto": "react-native-crypto",
     "dns": "dns.js",
-    "net": "react-native-tcp",
     "domain": "domain-browser",
     "http": "@tradle/react-native-http",
     "https": "https-browserify",
-    "os": "react-native-os",
     "path": "path-browserify",
     "querystring": "querystring-es3",
     "fs": "react-native-level-fs",
@@ -73,7 +71,6 @@
     "timers": "timers-browserify",
     "tty": "tty-browserify",
     "vm": "vm-browserify",
-    "tls": false
   },
   "browser": {
     "_stream_duplex": "readable-stream/duplex",

@@ -15,6 +15,8 @@ import { ChevronDown, ChevronUp, X } from '@tamagui/lucide-icons'
 import { useState } from 'react'
 import { Platform } from 'react-native'
 import { useLink } from 'solito/navigation'
+import { BitGoAPI} from '@bitgo-beta/sdk-api'
+console.log('Home')
 
 export function HomeScreen({ pagesMode = false }: { pagesMode?: boolean }) {
   const linkTarget = pagesMode ? '/pages-example-user' : '/user'
@@ -58,7 +60,6 @@ export function HomeScreen({ pagesMode = false }: { pagesMode?: boolean }) {
         onPress={async () => {
           try {
 
-            const { BitGoAPI } = await import('@bitgo-beta/sdk-api')
             const sdk = new BitGoAPI({
               env: 'staging',
             })

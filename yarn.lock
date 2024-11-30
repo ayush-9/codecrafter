@@ -8314,13 +8314,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"base64-js@npm:0.0.8":
-  version: 0.0.8
-  resolution: "base64-js@npm:0.0.8"
-  checksum: 10/ab7f7b09a5cd0ca51f5d37196ebf4be293732e26a27c4b3f970b7e0efca7215efb8ae6128c833581e7b3808fe006262a49fe3be538d84d6af617ac2dc1f0537e
-  languageName: node
-  linkType: hard
-
 "base64-js@npm:^1.0.2, base64-js@npm:^1.2.3, base64-js@npm:^1.3.0, base64-js@npm:^1.3.1, base64-js@npm:^1.5.1":
   version: 1.5.1
   resolution: "base64-js@npm:1.5.1"
@@ -8896,7 +8889,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"buffer@npm:^5.0.0, buffer@npm:^5.0.6, buffer@npm:^5.4.3, buffer@npm:^5.5.0":
+"buffer@npm:^5.0.6, buffer@npm:^5.4.3, buffer@npm:^5.5.0":
   version: 5.7.1
   resolution: "buffer@npm:5.7.1"
   dependencies:
@@ -11869,7 +11862,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"events@npm:^1.0.0, events@npm:^1.0.2":
+"events@npm:^1.0.0":
   version: 1.1.1
   resolution: "events@npm:1.1.1"
   checksum: 10/524355c4364b4851d53ccf4fdab9570e3953e1f64ebca15554f33e50bebb4e71ab947ac0dee6f4ed5a567ff2eda54b0489b278b4fb7c8ec1f4982150079dfd40
@@ -11992,7 +11985,6 @@ __metadata:
     asyncstorage-down: "patch:asyncstorage-down@npm%3A4.2.0#~/.yarn/patches/asyncstorage-down-npm-4.2.0-d323e014ba.patch"
     babel-plugin-module-resolver: "npm:^5.0.2"
     browserify-zlib: "npm:~0.1.4"
-    buffer: "npm:^4.9.1"
     burnt: "npm:^0.12.2"
     console-browserify: "npm:^1.1.0"
     constants-browserify: "npm:^1.0.0"
@@ -12024,16 +12016,14 @@ __metadata:
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     react-native: "npm:0.74.2"
+    react-native-buffer: "npm:^6.0.3"
     react-native-crypto: "npm:^2.2.0"
     react-native-gesture-handler: "npm:~2.16.2"
     react-native-level-fs: "npm:^3.0.0"
-    react-native-os: "npm:^1.0.1"
     react-native-randombytes: "npm:^3.6.1"
     react-native-safe-area-context: "npm:4.10.4"
     react-native-screens: "npm:~3.31.1"
     react-native-svg: "npm:15.3.0"
-    react-native-tcp: "npm:^3.2.1"
-    react-native-udp: "npm:^2.1.0"
     react-native-web: "npm:~0.19.12"
     react-native-webassembly: "npm:^0.3.3"
     readable-stream: "npm:1.0.33"
@@ -14151,13 +14141,6 @@ __metadata:
     jsbn: "npm:1.1.0"
     sprintf-js: "npm:^1.1.3"
   checksum: 10/1ed81e06721af012306329b31f532b5e24e00cb537be18ddc905a84f19fe8f83a09a1699862bf3a1ec4b9dea93c55a3fa5faf8b5ea380431469df540f38b092c
-  languageName: node
-  linkType: hard
-
-"ip-regex@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "ip-regex@npm:1.0.3"
-  checksum: 10/9ce02e567949be9cf4d16c5c314cd241ce1edf78b2619e94b276cdff97eefe198970a224f9d1f0c22a92c4655997ad68fd34d82e41e7d19fafa47fe15108f22a
   languageName: node
   linkType: hard
 
@@ -18391,7 +18374,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"process@npm:^0.11.0, process@npm:^0.11.9, process@npm:~0.11.0":
+"process@npm:^0.11.0, process@npm:~0.11.0":
   version: 0.11.10
   resolution: "process@npm:0.11.10"
   checksum: 10/dbaa7e8d1d5cf375c36963ff43116772a989ef2bb47c9bdee20f38fd8fc061119cf38140631cf90c781aca4d3f0f0d2c834711952b728953f04fd7d238f59f5b
@@ -18787,6 +18770,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-buffer@npm:^6.0.3":
+  version: 6.0.3
+  resolution: "react-native-buffer@npm:6.0.3"
+  dependencies:
+    ieee754: "npm:^1.2.1"
+    react-native-fast-base64: "npm:^0.1.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-fast-base64: "*"
+  checksum: 10/387329d08554d35afb3fec78fb6984c5300545b26778301fdff3a2a2c534589a7e2422a787e8f9d3fb57ae8bd842e3655cbed3cfac6b2d11023658c555b2ef0e
+  languageName: node
+  linkType: hard
+
 "react-native-crypto@npm:^2.2.0":
   version: 2.2.0
   resolution: "react-native-crypto@npm:2.2.0"
@@ -18804,6 +18801,16 @@ __metadata:
   peerDependencies:
     react-native-randombytes: ">=2.0.0 <4.0.0"
   checksum: 10/52631bf32e5d3e0aad9329e3271808a30b91f8a072d4a0c2791105cd3c3aac5d1a63a4016a570790342baa7fc4b10f15024e4d6df47e57906197d7587af450e1
+  languageName: node
+  linkType: hard
+
+"react-native-fast-base64@npm:^0.1.1":
+  version: 0.1.2
+  resolution: "react-native-fast-base64@npm:0.1.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10/773054dcee83fe1161c68f9bb0b44cfda3da925558a186e0b05c147fa7da66410105e7f2583ee75c590bedae36f62c6fee0d3b7a1665e4509aae2d616e5a3bf8
   languageName: node
   linkType: hard
 
@@ -18845,13 +18852,6 @@ __metadata:
   peerDependencies:
     asyncstorage-down: ">=3.0.0 <5.0.0"
   checksum: 10/99ee634f498e4b7b1fbba15042b526c6a34fbb71ed05cf84fa80862cbda6ee23bce99be2a03b8ef85c0edb4ce63238277d4accc5c2ede784a67dcf4ca80ddd94
-  languageName: node
-  linkType: hard
-
-"react-native-os@npm:^1.0.1":
-  version: 1.2.6
-  resolution: "react-native-os@npm:1.2.6"
-  checksum: 10/e6450909511134467b1e2216554ea5296835f77533aa1d14ff0143c54d2509b38929130d50244aaa7439ef806f74a988ee19fc08caec32569af5f017afea57d9
   languageName: node
   linkType: hard
 
@@ -18898,35 +18898,6 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 10/03cb153da260bf31f325f2c98e235f76a15af2211e5ee056667230d872b125ded2d3a7910f41b6239f5d35554eb276581e08629b6d27ffb7da55784ac6041a64
-  languageName: node
-  linkType: hard
-
-"react-native-tcp@npm:^3.2.1":
-  version: 3.3.2
-  resolution: "react-native-tcp@npm:3.3.2"
-  dependencies:
-    base64-js: "npm:0.0.8"
-    buffer: "npm:^5.0.0"
-    events: "npm:^1.0.2"
-    ip-regex: "npm:^1.0.3"
-    process: "npm:^0.11.9"
-    util: "npm:^0.10.3"
-  peerDependencies:
-    react-native: ">=0.40.0"
-  checksum: 10/b705a69241add2f11887df1aa509107644d34a35f9e8bbb1ce06860a24aa5043553c47fb95d04bccdc9151e6a470aa90fe15f93dfbca3a84362f411d34b290ca
-  languageName: node
-  linkType: hard
-
-"react-native-udp@npm:^2.1.0":
-  version: 2.7.0
-  resolution: "react-native-udp@npm:2.7.0"
-  dependencies:
-    base64-js: "npm:0.0.8"
-    events: "npm:^1.0.2"
-    inherits: "npm:^2.0.1"
-    ip-regex: "npm:^1.0.3"
-    util: "npm:^0.10.3"
-  checksum: 10/3178c252446bd87342cd7f165f0447a8944f0fc8da39d032a5b33e3a733f3f28ef5aaf1b8a65a81cd13e0f74f6a982dfe8a73d3cb939b1f3ffd5532959709117
   languageName: node
   linkType: hard
 
